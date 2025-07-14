@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-const Signup = () => {
+const Signup = ({ onSignup }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
@@ -18,6 +18,7 @@ const Signup = () => {
 
     const updatedUsers = [...users, { username, password }];
     localStorage.setItem("users", JSON.stringify(updatedUsers));
+    onSignup();
     navigate("/");
   };
 
