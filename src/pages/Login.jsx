@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = ({ onLogin }) => {
-  alert(
-    "Nima uchundir Sigup ishlamayabdi !!! mommo menda emas kampiyuterimda ishladi lekin verselda yo'q."
-  );
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
